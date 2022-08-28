@@ -5,7 +5,7 @@ THIS WAS TESTED AND BUILT IN **MANJARO LINUX** and **AWESOMEWM**
 I used:
 - **CONKY** (Desktop widgets)
 - **POLYBAR** (The bar)
-- **AWESOMEWM** (DE)
+- **AWESOMEWM** (Window Manager)
 - **KITTY** (Terminal emulator)
 - **TERMINESS NERD FONTS**
 

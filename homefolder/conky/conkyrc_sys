@@ -1,0 +1,108 @@
+# Use Xft?
+use_xft yes
+xftfont cure:size=6
+
+# Update interval in seconds
+update_interval 1
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Create own window instead of using desktop (required in nautilus)
+own_window  yes
+own_window_transparent yes
+own_window_type override
+own_window_hints undecorate,below,sticky,skip_taskbar,skip_pager 
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# Minimum size of text area
+minimum_size 350 0
+
+maximum_width 350
+
+# Draw shades?
+draw_shades no
+
+# Draw outlines?
+draw_outline no
+
+# Draw borders around text
+draw_borders no
+
+# Stippled borders?
+stippled_borders 0
+
+# border margins
+border_margin 0
+
+# border width
+border_width 0
+
+# Default colors and also border colors
+default_color 303030
+#default_shade_color white
+#default_outline_color black
+own_window_colour 262524
+
+# Text alignment, other possible values are commented
+alignment top_left
+#alignment top_right
+#alignment bottom_left
+#alignment bottom_right
+
+# Gap between borders of screen and text
+# same thing as passing -x at command line
+gap_x 10
+gap_y 290
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+
+# set to yes if you want all text to be in uppercase
+uppercase yes
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# number of net samples to average
+# set to 1 to disable averaging
+net_avg_samples 2
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale yes
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+use_spacer yes
+
+color0 ff003b 		# Light blue
+
+TEXT
+${font Liberation Mono:bold:size=10}${color0}Cpu 1:${color grey60}  ${cpu cpu1}% 
+${color grey60}${cpugraph cpu1 20,350 303030 467f77} 
+${color0}Cpu 2:${color grey60}  ${cpu cpu2}%
+${color grey60}${cpugraph cpu2 20,350 303030 467f77} 
+${color0}Ram used:${color grey60} $mem / $memmax
+${color0}Swap used:${color grey60} $swap / $swapmax
+${color0}Name${goto 170}PID${goto 220}CPU%${goto 285}MEM 
+      Top Cpu${color grey60}${font Liberation Mono:bold:size=9}
+${top name 1}${goto 170}${top pid 1}${goto 220}${top cpu 1}${goto 285}${top mem_res 1}
+${top name 2}${goto 170}${top pid 2}${goto 220}${top cpu 2}${goto 285}${top mem_res 2}
+${top name 3}${goto 170}${top pid 3}${goto 220}${top cpu 3}${goto 285}${top mem_res 3}
+${top name 4}${goto 170}${top pid 4}${goto 220}${top cpu 4}${goto 285}${top mem_res 4}
+${top name 5}${goto 170}${top pid 5}${goto 220}${top cpu 5}${goto 285}${top mem_res 5}
+${top name 6}${goto 170}${top pid 6}${goto 220}${top cpu 6}${goto 285}${top mem_res 6}
+${top name 7}${goto 170}${top pid 7}${goto 220}${top cpu 7}${goto 285}${top mem_res 7}
+${top name 8}${goto 170}${top pid 8}${goto 220}${top cpu 8}${goto 285}${top mem_res 8}
+${color0}${font Liberation Mono:bold:size=10}      Top Mem${color grey60}${font Liberation Mono:bold:size=9}
+${top_mem name 1}${goto 170}${top_mem pid 1}${goto 220}${top_mem cpu 1}${goto 285}${top_mem mem_res 1}
+${top_mem name 2}${goto 170}${top_mem pid 2}${goto 220}${top_mem cpu 2}${goto 285}${top_mem mem_res 2}
+${top_mem name 3}${goto 170}${top_mem pid 3}${goto 220}${top_mem cpu 3}${goto 285}${top_mem mem_res 3}
+${top_mem name 4}${goto 170}${top_mem pid 4}${goto 220}${top_mem cpu 4}${goto 285}${top_mem mem_res 4}
+${top_mem name 5}${goto 170}${top_mem pid 5}${goto 220}${top_mem cpu 5}${goto 285}${top_mem mem_res 5}
+${top_mem name 6}${goto 170}${top_mem pid 6}${goto 220}${top_mem cpu 6}${goto 285}${top_mem mem_res 6}
+${top_mem name 7}${goto 170}${top_mem pid 7}${goto 220}${top_mem cpu 7}${goto 285}${top_mem mem_res 7}
+${top_mem name 8}${goto 170}${top_mem pid 8}${goto 220}${top_mem cpu 8}${goto 285}${top_mem mem_res 8}

@@ -1,0 +1,4 @@
+${color0}Artist: ${color grey60}[--datatype=AR]
+${color0}Album: ${color grey60}[--datatype=AL]
+${color0}Title: ${color grey60}[--datatype=TI]
+${color0}Position: ${color grey60}[--datatype=PT]/[--datatype=LE] - [--datatype=PP]%

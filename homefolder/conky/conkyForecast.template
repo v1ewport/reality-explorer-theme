@@ -1,0 +1,18 @@
+${voffset 5}${goto 10}${font ConkyWeather:style=Bold:size=40}[--datatype=WF]${font}
+${voffset 5}${goto 20}[--datatype=HT --hideunits --centeredwidth=3]/[--datatype=LT --hideunits --centeredwidth=3]
+${voffset 10}${goto 10}${font ConkyWindNESW:size=40}[--datatype=BS]${font}
+${voffset 5}${goto 10}[--datatype=WS] - [--datatype=WD]
+${voffset -155}${goto 105}${color grey60}${font Liberation Mono:bold:size=10}[--datatype=CT]${font}
+${voffset 10}${goto 105}${color0}Station: ${color grey60}[--datatype=OB]
+${goto 105}${color0}Rain: ${color grey60}[--datatype=PC]
+${goto 105}${color0}UV: ${color grey60}[--datatype=UI] - [--datatype=UT]
+${goto 105}${color0}Humidity: ${color grey60}[--datatype=HM]
+${goto 105}${color0}Dew Point: ${color grey60}[--datatype=DP]
+${goto 105}${color0}Sunrise/Set: ${color grey60}[--datatype=SR] / [--datatype=SS]
+${goto 105}${color0}Bar: ${color grey60}[--datatype=BR] - [--datatype=BD]
+${goto 105}${color0}Moon: ${color grey60}[--datatype=MP]
+${voffset 36}${goto 20}[--datatype=DW --startday=1 --shortweekday]${goto 95}[--datatype=DW --startday=2 --shortweekday]${goto 170}[--datatype=DW --startday=3 --shortweekday]${goto 245}[--datatype=DW --startday=4 --shortweekday]
+${voffset 10}${goto 10}${font ConkyWeather:size=32}[--datatype=WF --startday=1 --endday=4 --spaces=3]${font}
+${voffset 5}${goto 15}[--datatype=HT --startday=1 --hideunits --centeredwidth=3]/[--datatype=LT --startday=1 --hideunits --centeredwidth=3]${goto 90}[--datatype=HT --startday=2 --hideunits --centeredwidth=3]/[--datatype=LT --startday=2 --hideunits --centeredwidth=3]${goto 170}[--datatype=HT --startday=3 --hideunits --centeredwidth=3]/[--datatype=LT --startday=3 --hideunits --centeredwidth=3]${goto 245}[--datatype=HT --startday=4 --hideunits --centeredwidth=3]/[--datatype=LT --startday=4 --hideunits --centeredwidth=3]
+${goto 15}PP [--datatype=PC --startday=1 --centeredwidth=3]${goto 90}PP [--datatype=PC --startday=2 --centeredwidth=3]${goto 170}PP [--datatype=PC --startday=3 --centeredwidth=3]${goto 245}PP [--datatype=PC --startday=4 --centeredwidth=3]
+${color0}${font Liberation Mono:bold:size=7}${alignr 20}Last Update: [--datatype=LU]${font}

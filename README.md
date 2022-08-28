@@ -12,12 +12,12 @@ I used:
 # INSTALLATION
 
 Install the **POLYBAR THEME** from here:
-  `https://github.com/adi1090x/polybar-themes`
+  https://github.com/adi1090x/polybar-themes
 
 It runs with the command `~/.config/polybar/launch.sh --hack`
 
 The conky dotfiles are a custom version of these:
-  `https://www.deviantart.com/laserbeam3/art/Conky-empowered-desktop-168092656
+  https://www.deviantart.com/laserbeam3/art/Conky-empowered-desktop-168092656
   
 Copy the .conky folder to your home folder
 Copy all the files from the bin folder to /usr/bin and make them executable
@@ -32,3 +32,4 @@ The AwesomeWM config file has the code to run polybar, conky and change the wall
 ![alt text](https://raw.githubusercontent.com/v1ewport/reality-explorer-theme/main/screenshots/s2.png)
 ![alt text](https://raw.githubusercontent.com/v1ewport/reality-explorer-theme/main/screenshots/s3.png)
 ![alt text](https://raw.githubusercontent.com/v1ewport/reality-explorer-theme/main/screenshots/s4.png)
+(The VSCODE theme is called "Activate SCARLET Protocol")

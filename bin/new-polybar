@@ -1,0 +1,2 @@
+#!/bin/bash
+sh ~/.config/polybar/launch.sh --hack

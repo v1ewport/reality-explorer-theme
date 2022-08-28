@@ -1,0 +1,5 @@
+#!/bin/bash
+conky -c ~/conky/conkyrc_clock &
+conky -c ~/conky/conkyrc_weather &
+conky -c ~/conky/conkyrc_sys &
+conky -c ~/conky/conkyrc_disk

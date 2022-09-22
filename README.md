@@ -36,3 +36,8 @@ The AwesomeWM config file has the code to run polybar, conky and change the wall
 ![alt text](https://raw.githubusercontent.com/v1ewport/reality-explorer-theme/main/screenshots/s3.png)
 ![alt text](https://raw.githubusercontent.com/v1ewport/reality-explorer-theme/main/screenshots/s4.png)
 (The VSCODE theme is called "Activate SCARLET Protocol")
+
+# EXTRA
+BLENDER THEME
+![alt text](https://raw.githubusercontent.com/v1ewport/reality-explorer-theme/main/screenshots/s5.png)
+

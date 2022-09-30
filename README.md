@@ -29,6 +29,11 @@ Copy the Wallpapers to /home/youruser/Pictures/Wallpapers/
 
 The AwesomeWM config file has the code to run polybar, conky and change the wallpapers for each workspace
 
+# UPDATES
+
+- NEW CUSTOM AWESOMEWM WIBAR (without polybar, included in awesomewm config file)
+![alt text](https://raw.githubusercontent.com/v1ewport/reality-explorer-theme/main/screenshots/wibar.png)
+
 # SCREENSHOTS
 
 (The VSCODE theme is called "Activate SCARLET Protocol")

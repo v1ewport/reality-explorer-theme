@@ -11,19 +11,21 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font = "FiraCode Nerd Font Medium 12"
--- theme.font_big = "Fira Code Medium " .. dpi(14)
-theme.font_big = "FiraCode Nerd Font Medium 14"
--- theme.font_small = "Fira Code Medium " .. dpi(10)
-theme.font_small = "FiraCode Nerd Font Medium 10"
+theme.font = "TerminessTTF Nerd Font Bold 10"
+-- theme.font_big = "Noto Sans Regular 20" .. dpi(14)
+theme.font_big = "TerminessTTF Nerd Font Bold 14"
+-- theme.font_small = "Noto Sans Regular 20" .. dpi(10)
+theme.font_small = "TerminessTTF Nerd Font Bold 7"
 
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#444444"
+theme.taglist_font = "TerminessTTF Nerd Font Bold 14"
+
+theme.bg_normal     = "#0b050a"
+theme.bg_focus      = "#0b050a"
+theme.bg_urgent     = "#0b050a"
+theme.bg_minimize   = "#0b050a"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#aaaaaa"
+theme.fg_normal     = "#fff000"
 theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
@@ -101,7 +103,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = themes_path.."default/background.png"
+-- theme.wallpaper = themes_path.."default/background.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"

@@ -45,7 +45,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "theme.lua")
+beautiful.init("~/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
@@ -53,7 +53,13 @@ editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 beautiful.useless_gap = 10
 
-awful.util.spawn("new-polybar")
+awful.util.spawn("xrandr --output HDMI-0 --primary")
+awful.util.spawn("xrandr --output DVI-D-0 --mode 1024x768")
+awful.util.spawn("xrandr --output HDMI-0 --right-of DVI-D-0")
+
+awful.util.spawn("feh --bg-scale /home/viewport/Pictures/Wallpapers/1.png /home/viewport/Pictures/Wallpapers/9.png")
+mouse.screen = screen.primary
+
 awful.util.spawn("conky_start")
 
 -- Default modkey.
@@ -200,21 +206,20 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
-
+    s.mywibox = awful.wibar({position = top, screen = s, height = 20, fg = "#FFF000" })
+    s.swibox = awful.wibar({position = top, screen = s, height = 2, bg = "#C80037" })
+    
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
@@ -381,6 +386,9 @@ clientkeys = gears.table.join(
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it work on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
+wall1 = "/home/viewport/Pictures/Wallpapers/1.png"
+wall2 = "/home/viewport/Pictures/Wallpapers/2.png"
+
 for i = 1, 9 do
     globalkeys = gears.table.join(globalkeys,
         -- View tag only.
@@ -388,15 +396,19 @@ for i = 1, 9 do
                   function ()
                         local screen = awful.screen.focused()
                         local tag = screen.tags[i]
-                        wall_cmd = "feh --bg-scale /home/viewport/Pictures/Wallpapers/" .. i .. ".png"
-                        awful.util.spawn(wall_cmd)
                         if tag then
-                           tag:view_only()
-                        end                
-			
-        	  end,
+				tag:connect_signal("property::selected", function(t) 
+					if t.selected then 
+                				local ts = t.screen
+						gears.wallpaper.maximized("/home/viewport/Pictures/Wallpapers/" .. i .. ".png", ts, false)
+                                	end
+				end
+				)
+				tag:view_only()
+                        end
+                  end,
                   {description = "view tag #"..i, group = "tag"}),
-        
+
         -- Toggle tag display.
         awful.key({ modkey, "Control" }, "#" .. i + 9,
                   function ()
@@ -431,6 +443,7 @@ for i = 1, 9 do
                   {description = "toggle focused client on tag #" .. i, group = "tag"})
     )
 end
+
 
 clientbuttons = gears.table.join(
     awful.button({ }, 1, function (c)

@@ -179,9 +179,9 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   " }, s, awful.layout.layouts[1])
-
-    -- Create a promptbox for each screen
+    awful.tag({ "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   " }, s, awful.layout.layouts[1])
+    
+		-- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
     -- Create an imagebox widget which will contain an icon indicating which layout we're using.
     -- We need one layoutbox per screen.
